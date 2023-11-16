@@ -189,7 +189,8 @@
 
 #portfolio{
     margin-top: 20px;
-    justify-content: center
+    justify-content: center;
+    margin-bottom: 30px;
 }
 .ptitle{
     font-size: 25px;
@@ -215,44 +216,175 @@
 
 
 /* Pricing ---------------------------------------------*/
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  
+  .card1,.card2,.card3 {
+    background: #fff;
+    color: hsl(233, 13%, 49%);
+    border-radius: 0.8rem;
+    
+  }
+  
+  .card1:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(163, 168, 240, 1) 0%,
+      rgba(105, 111, 221, 1) 100%
+    );
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  .card2:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(163, 168, 240, 1) 0%,
+      rgba(105, 111, 221, 1) 100%
+    );
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  .card3:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(163, 168, 240, 1) 0%,
+      rgba(105, 111, 221, 1) 100%
+    );
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  .card1:hover .price-bottom-bar,.card2:hover .price-bottom-bar,.card3:hover .price-bottom-bar{
+    color: white;
+  }
+ 
+  .card1:hover .btn , .card2:hover .btn,.card3:hover .btn {
+    color: rgba(105, 111, 221, 1);
+    background: #fff;
+  }
 
-#Pricing{
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+  .pricing-ul {
+    margin: 2.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    
-}
-
-
-table{
-    width: auto;
-    margin: 20px;
-    padding: 20px;
-    border: 2px solid #023047;
-    border-radius: 20px;
-    
-}
-
-table th,td{
-    
-    text-align: center;
-    padding: 10px;
-    
-}
-
-table th{
-    color: #034056;
+    justify-content: space-around;
+  }
+  .pricing-ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .price-bottom-bar {
+    font-size: 3rem;
+    color: hsl(232, 13%, 33%);
+    padding-bottom: 2rem;
+  }
+  .card1,.card2,.card3 {
+    box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .btn {
+    margin-top: 1rem;
+    height: 2.6rem;
+    width: 13.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: linear-gradient(
+      135deg,
+      rgba(163, 168, 240, 1) 0%,
+      rgba(105, 111, 221, 1) 100%
+    );
+    color: #fff;
+    outline: none;
+    border: 0;
     font-weight: bold;
-}
-
-table td{
-    font-weight: 600;
-}
-
-
+  }
+  .active-btn {
+    background: #fff;
+    color: hsl(237, 63%, 64%);
+  }
+  .bottom-bar {
+    border-bottom: 2px solid hsla(240, 8%, 85%, 0.582);
+  }
+ 
+  
+  @media (max-width: 280px) {
+    .pricing-ul {
+      margin: 1rem;
+    }
+    
+    .card1,.card2,.card3 {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      transform: scale(0.8);
+      margin-bottom: 1rem;
+    }
+  
+    
+  }
+  
+  @media (min-width: 280px) and (max-width: 320px) {
+    .pricing-ul {
+      margin: 20px;
+    }
+    .card1,.card2,.card3 {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+    
+  }
+  
+  @media (min-width: 320px) and (max-width: 414px) {
+    .cards {
+      display: flex;
+      flex-direction: column;
+    }
+    .card1,.card2,.card3{
+      margin-bottom: 1rem;
+    }
+    
+  }
+  @media (min-width: 414px) and (max-width: 768px) {
+    .card1,.card2,.card3{
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+    }
+    
+  }
+  @media (min-width: 768px) and (max-width: 1046px) {
+    .cards {
+      display: flex;
+    }
+    .card1,.card2,.card3 {
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+    }
+    
+  }
+  
 /* About Me -------------------------------------------------------*/
 
 #about-me{
@@ -264,7 +396,9 @@ table td{
 }
 
 #about-me img{
-    width: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #about-me p{
@@ -280,9 +414,9 @@ table td{
 
 .icons img{
 
-    width: 50px;
-    height: 50px;
-    margin: 15px;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
 }
 
 .icons img:hover{
