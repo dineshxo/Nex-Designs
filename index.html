@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>NexDesigns</title>
+
+    <script>
+        // Simple JavaScript function to change the hero section text
+        var texts = [
+            'Social Media Post ',
+            'Flyers or Brochures ',
+            'Bill Board Designs ',
+            'Amazing Designs',
+            'Name Board Design'
+        ];
+
+        var currentIndex = 0;
+        var intervalID;
+
+        function changeTextContent() {
+            var element = document.getElementById('amazingdesign');
+            element.textContent = texts[currentIndex];
+            
+            // Increment the index, and cycle back to 0 if it exceeds the length of the array
+            currentIndex = (currentIndex + 1) % texts.length;
+        }
+
+        intervalId = setInterval(changeTextContent, 2000);
+
+        window.onunload = function() {
+            clearInterval(intervalId);
+        };
+
+    </script>
+</head>
+<body>
+
+    <!----------------------------------------- Header ---------------------------------------->
+    <header class="main-header">
+		<div class="container">
+			<!--Logo-->
+			<div class="logo">
+				<h1><a href="#portfolio"> NexDesigns </a></h1>
+			</div>
+
+		<!-- Navigation Menu -->
+		<nav id="nav-bar">
+			<ul>
+                <li><a href="#portfolio" > Portfolio </a></li>
+				<li><a href="#Pricing"> Pricing </a></li>
+				<li><a href="#about-me"> About Me </a></li>
+				
+			</ul>
+		</nav>	
+	</header>
+
+
+    <!-- Hero Section--------------------------------------------->
+
+    <div class="hero-container">
+		
+		<div class="hero-text">
+
+        <h1>Looking
+        For a</h1>
+        <h1 id="amazingdesign">Amazing Design</h1>
+        <h1><span style="color: #ffb300; font-size: 60px;">?</span></h1>
+        
+        <p>I am a Professional Graphics Designer.</p>
+        <a href="https://www.behance.net/dineshmk" class="hire-me-button" target="_blank">Hire Me</a>
+        
+
+    </div>
+
+    <div class="hero-image">
+        <img src="img/heroimage.jpg" alt="Profile Picture">
+    </div>
+
+	</div>
+
+    <!------ Portfolio Section -->
+
+    <div  id="portfolio">
+        <div class="ptitle"> Creative Projects Designed by <span style="color: rgb(226, 43, 7)">NexDesigns!</span></div>
+    </div>
+
+    <div class="projects-images">
+    <img src="img/Portfolio/1.jpg" alt="work1">
+    <img src="img/Portfolio/2.jpg" alt="work2">
+    <img src="img/Portfolio/3.jpg" alt="work3">
+    <img src="img/Portfolio/4.jpg" alt="work4">
+    <img src="img/Portfolio/5.jpg" alt="work5">
+    <img src="img/Portfolio/6.jpg" alt="work6">
+</div>
+
+<!-- Pricing Table ------------------------------------------------->
+
+<div  id="Pricing">
+    <div class="ptitle"> Better Pricing for  <span style="color: rgb(226, 43, 7)"> You!</span></div>
+
+<div class="p-table">
+
+<table >
+    <tr>
+      <th>Design Type</th>
+      <th>Design </th>
+      <th>Design and Source File</th>
+    </tr>
+    <tr>
+      <td>Social Media</td>
+      <td>4$</td>
+      <td>7$</td>
+    </tr>
+    <tr>
+      <td>Flyers and Brochures</td>
+      <td>5$</td>
+      <td>8$</td>
+    </tr>
+    <tr>
+      <td>Bill Boards</td>
+      <td>15$</td>
+      <td>20$</td>
+    </tr>
+    <tr>
+        <td>Name Boards</td>
+        <td>10$</td>
+        <td>15$</td>
+      </tr>
+     </table>
+    </div>
+</div>
+     <!-- About Me Section-->
+
+     <div id="about-me">
+
+     <img src="img/aboutme.png" alt="aboutme">
+     <p><span style="font-weight: bold;">Greetings!</span> I'm <span style="color: #00b8be; font-weight: bold;">Dinesh Manchanayaka,</span> a passionate graphics designer dedicated to bringing creativity to life through visual storytelling. With a keen eye for detail and a love for aesthetics, I specialize in crafting engaging and impactful designs.
+
+        My journey in the world of graphic design has been fueled by a deep appreciation for the fusion of art and technology. From conceptualizing unique ideas to translating them into visually stunning graphics, I take pride in delivering designs that not only meet but exceed expectations.
+        
+        I believe in the power of design to communicate, evoke emotions, and leave a lasting impression. Whether it's creating captivating logos, eye-catching illustrations, or designing user-friendly websites, I am committed to delivering work that not only meets the client's needs but also reflects my dedication to the craft.</p>
+    </div>
+
+    <div class="social">
+        <div class="icons">
+            <a href="https://www.behance.net/dineshmk" target="_blank"><img src="img/Social Media Icons/behance.png" alt="behance"></a>
+            <a href="https://web.facebook.com/" target="_blank"><img src="img/Social Media Icons/facebook.png" alt="facebook"></a>
+            <a href="https://github.com/" target="_blank"><img src="img/Social Media Icons/github.png" alt="github"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/Social Media Icons/ig.png" alt="instagram"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="img/Social Media Icons/linkedin.png" alt="linkedin"></a>
+        </div>
+    </div>
+
+
+    <!-- Footer    --------------------------------------->
+
+    <footer>
+        &copy; Nexdesigns 2023
+    </footer>
+</body>
+</html>
